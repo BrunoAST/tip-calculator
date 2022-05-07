@@ -1,12 +1,15 @@
 :root {
   --page-background: #d6e1c8;
-  --container-background: #fffcde;
+  --light-color: #fffcde;
   --input-background: #fff5da;
 
   --main-title: #496156;
   --subtitle: #6a6f62;
-  --input-font-color: #194842;
+  --price-color: #4bc295;
+  --green-primary: #194842;
+  --green-secondary: #b1e5c1;
   --input-border: #6fa88c;
+  --btn-disabled: #28675e;
 }
 
 * {
@@ -24,6 +27,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 60px;
 }
 
 .title-box {
@@ -41,8 +45,8 @@ body {
 }
 
 .container {
-  width: 600px;
-  background-color: var(--container-background);
+  width: 650px;
+  background-color: var(--light-color);
   padding: 21px 21px 21px 32px;
   border-radius: 15px;
   display: flex;
@@ -50,7 +54,15 @@ body {
   gap: 32px;
 }
 
-.bill {
+.action-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.bill,
+.select-tip,
+.number-of-people {
   display: flex;
   flex-direction: column;
   gap: 8px;

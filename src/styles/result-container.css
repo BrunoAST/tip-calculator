@@ -1,0 +1,42 @@
+.result-container {
+  background-color: var(--green-primary);
+  border-radius: 15px;
+  padding: 42px 26px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.total-resume-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.total-resume {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.total-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-type {
+  font-size: 0.75rem;
+  color: var(--light-color);
+}
+
+.person {
+  font-size: 0.625rem;
+  color: var(--subtitle);
+}
+
+.price {
+  font-size: 2rem;
+  color: var(--price-color);
+  margin-top: -10px;
+}

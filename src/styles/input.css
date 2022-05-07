@@ -12,7 +12,7 @@ input {
   padding: 0 12px 0 32px;
   text-align: end;
   transition: all 300ms ease-in-out;
-  color: var(--input-font-color);
+  color: var(--green-primary);
 }
 
 .form-group:focus-within input {

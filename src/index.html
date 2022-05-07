@@ -39,16 +39,32 @@
       href="./styles/icon.css"
       rel="stylesheet"
     />
+    <link
+      href="./styles/button.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./styles/select-tip.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./styles/result-container.css"
+      rel="stylesheet"
+    />
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
 
-  <bo>
+  <body>
+    <!-- Main title -->
     <div class="title-box">
       <h1 class="title">Splitter</h1>
     </div>
+    <!-- /Main title -->
+
     <div class="container">
-      <div>
+      <div class="action-container">
+        <!-- Bill -->
         <div class="bill">
           <span class="subtitle">Bill</span>
           <div class="form-group">
@@ -63,30 +79,86 @@
             >
           </div>
         </div>
+        <!-- /Bill -->
 
+        <!-- Select tip -->
         <div class="select-tip">
           <span class="subtitle">Select Tip %</span>
-          5%
-          10%
-          15%
-          25%
-          50%
+          <div class="percentage-container">
+            <div class="percentage-line-1">
+              <button
+                type="button"
+                class="btn-percentage"
+              >5%</button>
+              <button
+                type="button"
+                class="btn-percentage"
+              >10%</button>
+              <button
+                type="button"
+                class="btn-percentage"
+              >15%</button>
+            </div>
+            <div class="percentage-line-2">
+              <button
+                type="button"
+                class="btn-percentage"
+              >25%</button>
+              <button
+                type="button"
+                class="btn-percentage"
+              >50%</button>
+              <button
+                type="button"
+                class="btn-custom"
+              >Custom</button>
+            </div>
+          </div>
         </div>
+        <!-- /Select tip -->
 
-        Custom
-        Number
-        of
-        People
+        <!-- Number of people -->
+        <div class="number-of-people">
+          <span class="subtitle">Number of People</span>
+
+          <div class="form-group">
+            <input
+              type="number"
+              min="1"
+            />
+            <img
+              class="icon"
+              src="./assets/icon-person.svg"
+              alt=""
+            >
+          </div>
+        </div>
+        <!-- /Number of people -->
       </div>
-      <div>
-        Tip
-        Amount
-        /
-        person
-        Total
-        /
-        person
-        Reset
+
+      <div class="result-container">
+        <div class="total-resume-container">
+          <div class="total-resume">
+            <div class="total-labels">
+              <span class="total-type">Tip Amount</span>
+              <span class="person">/ person</span>
+            </div>
+            <span class="price">$0.00</span>
+          </div>
+
+          <div class="total-resume">
+            <div class="total-labels">
+              <span class="total-type">Total</span>
+              <span class="person">/ person</span>
+            </div>
+             <span class="price">$0.00</span>
+          </div>
+        </div>
+        <button
+          class="btn-reset"
+          type="button"
+          disabled
+        >Reset</button>
       </div>
     </div>
 
@@ -106,6 +178,6 @@
         BrunoAST.
       </a>
     </div>
-    </body>
+  </body>
 
 </html>

@@ -1,0 +1,37 @@
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn-percentage,
+.btn-custom {
+  width: 80px;
+  height: 32px;
+}
+
+.btn-percentage {
+  background-color: var(--green-primary);
+  color: var(--light-color);
+  transition: 300ms ease;
+}
+
+.btn-percentage:hover {
+  background-color: var(--green-secondary);
+  color: var(--green-primary);
+}
+
+.btn-custom {
+  color: var(--subtitle);
+  background-color: var(--input-background);
+}
+
+.btn-reset {
+  height: 32px;
+  text-transform: uppercase;
+}
+
+.btn-reset:disabled {
+  background-color: var(--btn-disabled);
+}

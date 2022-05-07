@@ -1,0 +1,12 @@
+.percentage-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.percentage-line-1,
+.percentage-line-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
