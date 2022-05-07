@@ -1,0 +1,70 @@
+:root {
+  --page-background: #d6e1c8;
+  --container-background: #fffcde;
+  --input-background: #fff5da;
+
+  --main-title: #496156;
+  --subtitle: #6a6f62;
+  --input-font-color: #194842;
+  --input-border: #6fa88c;
+}
+
+* {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--page-background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-box {
+  width: 120px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--main-title);
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+.container {
+  width: 600px;
+  background-color: var(--container-background);
+  padding: 21px 21px 21px 32px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subtitle {
+  color: var(--subtitle);
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
