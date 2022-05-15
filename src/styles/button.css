@@ -17,15 +17,13 @@ button {
   transition: 300ms ease;
 }
 
-@media(max-width: 970px) {
-  .btn-custom,
-  .btn-percentage {
-    flex-grow: 1;
-  }
-}
-
 .btn-percentage:hover {
   background-color: var(--green-secondary);
+  color: var(--green-primary);
+}
+
+.btn-percentage-active {
+  background-color:var(--btn-active);
   color: var(--green-primary);
 }
 
@@ -41,4 +39,11 @@ button {
 
 .btn-reset:disabled {
   background-color: var(--btn-disabled);
+}
+
+@media(max-width: 970px) {
+  .btn-custom,
+  .btn-percentage {
+    flex-grow: 1;
+  }
 }
