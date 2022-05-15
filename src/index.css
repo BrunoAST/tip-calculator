@@ -10,6 +10,8 @@
   --green-secondary: #b1e5c1;
   --input-border: #6fa88c;
   --btn-disabled: #28675e;
+
+  --mobile-breakpoint: 970px;
 }
 
 * {
@@ -58,6 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 100%;
 }
 
 .bill,
@@ -79,4 +82,15 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 970px) {
+  body {
+    gap: 30px;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
 }

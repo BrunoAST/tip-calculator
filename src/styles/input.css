@@ -15,6 +15,12 @@ input {
   color: var(--green-primary);
 }
 
+@media (max-width: 970px) {
+  input {
+    width: 100%;
+  }
+}
+
 .form-group:focus-within input {
   transform: scale(1.05);
   border: 2px solid var(--input-border);

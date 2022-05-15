@@ -17,6 +17,13 @@ button {
   transition: 300ms ease;
 }
 
+@media(max-width: 970px) {
+  .btn-custom,
+  .btn-percentage {
+    flex-grow: 1;
+  }
+}
+
 .btn-percentage:hover {
   background-color: var(--green-secondary);
   color: var(--green-primary);
