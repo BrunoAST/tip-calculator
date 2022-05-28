@@ -1,0 +1,28 @@
+{
+  "name": "tip-calculator",
+  "version": "1.0.0",
+  "description": "Tip calculator - A challenge by Frontend Mentor",
+  "main": "index.js",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src/js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoAST/tip-calculator.git"
+  },
+  "author": "BrunoAST",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoAST/tip-calculator/issues"
+  },
+  "homepage": "https://github.com/BrunoAST/tip-calculator#readme",
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0"
+  }
+}
