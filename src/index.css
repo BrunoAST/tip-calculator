@@ -12,6 +12,8 @@
   --btn-disabled: #28675e;
   --btn-active: #B2E5C1;
 
+  --error: #C07560;
+
   --mobile-breakpoint: 970px;
 }
 
@@ -20,7 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
