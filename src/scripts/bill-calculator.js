@@ -2,6 +2,7 @@ const BillCalculator = {
   _fields: {
     bill: "",
     numberOfPeople: "",
+    tipPercentage: "",
   },
 
   setValueToField(fieldName, value) {
@@ -15,6 +16,10 @@ const BillCalculator = {
 
   get numberOfPeople() {
     return Number(this._fields.numberOfPeople);
+  },
+
+  get tipPercentage() {
+    return Number(this._fields.tipPercentage);
   },
 
   notifyOnFieldChanges(fields) { },
@@ -36,4 +41,4 @@ const BillCalculator = {
   }
 };
 
-// BillCalculator.registerFieldsListener(fields => console.log("Value: ", BillCalculator.calculateBill()));
+// BillCalculator.registerFieldsListener(fields => console.log("Fields: ", fields));
