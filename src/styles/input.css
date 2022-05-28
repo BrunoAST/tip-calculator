@@ -13,6 +13,7 @@ input {
   text-align: end;
   transition: all 300ms ease-in-out;
   color: var(--green-primary);
+  width: 100%;
 }
 
 @media (max-width: 970px) {
@@ -42,4 +43,23 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.form-group__error-message {
+  color: var(--error);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  right: 0;
+  bottom: 38px;
+}
+
+#number-of-people:invalid {
+  border: 2px solid var(--error);
+}
+
+#number-of-people:invalid + .form-group__error-message {
+  visibility: visible;
+  opacity: 1;
 }
