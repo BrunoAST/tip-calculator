@@ -53,6 +53,10 @@
     />
 
     <title>Frontend Mentor | Tip calculator app</title>
+
+    <script src="./scripts/bill-calculator.js"></script>
+    <script src="./scripts/input-validation.js"></script>
+    <script src="./scripts/input.js"></script>
   </head>
 
   <body>
@@ -69,13 +73,17 @@
           <span class="subtitle">Bill</span>
           <div class="form-group">
             <input
+              id="test"
               placeholder="0"
               type="number"
+              maxlength="7"
+              onkeydown="handleValidations(event, 'bill', ['maxLength', 'decimalPlace'])"
+              onkeyup="setValue(event, 'bill')"
             />
             <img
               class="icon"
               src="./assets/icon-dollar.svg"
-              alt=""
+              alt="Dollar symbol"
             >
           </div>
         </div>
@@ -146,13 +154,20 @@
 
           <div class="form-group">
             <input
+              id="number-of-people"
               type="number"
+              placeholder="0"
+              maxlength="2"
               min="1"
+              max="99"
+              onkeydown="handleValidations(event, 'numberOfPeople', ['maxLength'])"
+              onkeyup="setValue(event, 'numberOfPeople')"
             />
+            <span class="form-group__error-message">Can't be zero</span>
             <img
               class="icon"
               src="./assets/icon-person.svg"
-              alt=""
+              alt="Number of people"
             >
           </div>
         </div>
@@ -166,7 +181,12 @@
               <span class="total-type">Tip Amount</span>
               <span class="person">/ person</span>
             </div>
-            <span class="price">$0.00</span>
+            <span
+              class="price"
+              data-selector="tip-amount"
+            >
+              $0.00
+            </span>
           </div>
 
           <div class="total-resume">
@@ -174,14 +194,21 @@
               <span class="total-type">Total</span>
               <span class="person">/ person</span>
             </div>
-            <span class="price">$0.00</span>
+            <span
+              class="price"
+              data-selector="total"
+            >
+              $0.00
+            </span>
           </div>
         </div>
         <button
           class="btn-reset"
           type="button"
           disabled
-        >Reset</button>
+        >
+          Reset
+        </button>
       </div>
     </div>
 
@@ -201,8 +228,6 @@
         BrunoAST.
       </a>
     </div>
-
-    <script src="./index.js"></script>
   </body>
 
 </html>
