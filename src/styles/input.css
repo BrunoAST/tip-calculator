@@ -71,7 +71,7 @@ input[type="number"] {
   bottom: 38px;
 }
 
-#number-of-people:invalid {
+#percentage:invalid, #number-of-people:invalid {
   border: 2px solid var(--error);
 }
 

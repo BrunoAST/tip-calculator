@@ -17,5 +17,13 @@ const handleValidations = (event, fieldName, validations) => {
 };
 
 const setValue = (event, fieldName) => {
+  if (!event.target.validity.valid) {
+    return;
+  }
   BillCalculator.setValueToField(fieldName, event.target.value);
+};
+
+const resetValue = (element, fieldName) => {
+  BillCalculator.setValueToField(fieldName, "");
+  element.value = "";
 };

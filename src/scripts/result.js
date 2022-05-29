@@ -12,7 +12,6 @@ BillCalculator
   });
 
 const setTotalPerPerson = (totalPerPerson) => {
-  console.log(totalPerPerson)
   if (totalPerPerson) {
     totalPerPersonElement.innerHTML = `$${totalPerPerson}`;
   }

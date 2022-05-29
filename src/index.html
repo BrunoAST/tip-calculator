@@ -135,11 +135,13 @@
 
             <form class="percentage-form">
               <input
+                id="percentage"
                 type="number"
                 placeholder="Custom"
                 maxlength="2"
                 min="1"
                 max="99"
+                onfocus="removeActiveClassFromButton()"
                 onkeydown="handleValidations(event, 'tipPercentage', ['maxLength'])"
                 onkeyup="setValue(event, 'tipPercentage')"
               />

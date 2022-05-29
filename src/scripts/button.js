@@ -13,7 +13,9 @@ const removeActiveClassFromButton = () => {
 };
 
 const setActiveButton = (buttonElement) => {
+  const customPercentageElement = document.getElementById("percentage");
   buttonElement.classList.add("btn-percentage-active");
+  resetValue(customPercentageElement, "tipPercentage");
 };
 
 const setPercentageSelected = (event) => {
