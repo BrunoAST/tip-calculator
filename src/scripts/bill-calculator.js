@@ -7,7 +7,7 @@ const BillCalculator = {
 
   setValueToField(fieldName, value) {
     this._fields[fieldName] = value;
-    this.notifyOnFieldChanges(this._fields);
+    this.notifyOnFieldChanges();
   },
 
   get bill() {
@@ -22,7 +22,7 @@ const BillCalculator = {
     return Number(this._fields.tipPercentage);
   },
 
-  notifyOnFieldChanges(fields) { },
+  notifyOnFieldChanges() { },
 
   registerFieldsListener(listenerCallback) {
     this.notifyOnFieldChanges = listenerCallback;
@@ -32,13 +32,27 @@ const BillCalculator = {
     return this._fields[fieldName];
   },
 
-  calculateBill() {
-    return (this.bill / this.numberOfPeople).toFixed(2);
+  calculateTotalBillPerPerson() {
+    if (!this._isValid()) {
+      return;
+    }
+
+    return ((this.bill + this._calculatePercentageTip()) / this.numberOfPeople).toFixed(2);
   },
 
-  isValid() {
-    throw new Error("Method not implemented.");
+  calculateTotalTipPerPerson() {
+    if (!this._isValid()) {
+      return;
+    }
+
+    return (this._calculatePercentageTip() / this.numberOfPeople).toFixed(2);
+  },
+
+  _calculatePercentageTip() {
+    return this.bill * (this.tipPercentage / 100);
+  },
+
+  _isValid() {
+    return this.bill && this.numberOfPeople && this.tipPercentage;
   }
 };
-
-// BillCalculator.registerFieldsListener(fields => console.log("Fields: ", fields));
