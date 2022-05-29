@@ -5,8 +5,7 @@ button {
   border-radius: 3px;
 }
 
-.btn-percentage,
-.btn-custom {
+.btn-percentage {
   width: 80px;
   height: 32px;
 }
@@ -27,11 +26,6 @@ button {
   color: var(--green-primary);
 }
 
-.btn-custom {
-  color: var(--subtitle);
-  background-color: var(--input-background);
-}
-
 .btn-reset {
   height: 32px;
   text-transform: uppercase;
@@ -42,7 +36,6 @@ button {
 }
 
 @media(max-width: 970px) {
-  .btn-custom,
   .btn-percentage {
     flex-grow: 1;
   }
