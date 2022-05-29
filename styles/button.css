@@ -17,7 +17,7 @@ button {
 }
 
 .btn-percentage:hover {
-  background-color: var(--green-secondary);
+  background-color: var(--btn-active);
   color: var(--green-primary);
 }
 
