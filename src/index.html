@@ -53,10 +53,6 @@
     />
 
     <title>Frontend Mentor | Tip calculator app</title>
-
-    <script src="./scripts/bill-calculator.js"></script>
-    <script src="./scripts/input-validation.js"></script>
-    <script src="./scripts/input.js"></script>
   </head>
 
   <body>
@@ -71,9 +67,8 @@
         <!-- Bill -->
         <div class="bill">
           <span class="subtitle">Bill</span>
-          <div class="form-group">
+          <form class="form-group">
             <input
-              id="test"
               placeholder="0"
               type="number"
               maxlength="7"
@@ -85,7 +80,7 @@
               src="./assets/icon-dollar.svg"
               alt="Dollar symbol"
             >
-          </div>
+          </form>
         </div>
         <!-- /Bill -->
 
@@ -138,12 +133,17 @@
               50%
             </button>
 
-            <button
-              type="button"
-              class="btn-custom"
-            >
-              Custom
-            </button>
+            <form class="percentage-form">
+              <input
+                type="number"
+                placeholder="Custom"
+                maxlength="2"
+                min="1"
+                max="99"
+                onkeydown="handleValidations(event, 'tipPercentage', ['maxLength'])"
+                onkeyup="setValue(event, 'tipPercentage')"
+              />
+            </form>
           </div>
         </div>
         <!-- /Select tip -->
@@ -152,7 +152,7 @@
         <div class="number-of-people">
           <span class="subtitle">Number of People</span>
 
-          <div class="form-group">
+          <form class="form-group">
             <input
               id="number-of-people"
               type="number"
@@ -169,11 +169,12 @@
               src="./assets/icon-person.svg"
               alt="Number of people"
             >
-          </div>
+          </form>
         </div>
         <!-- /Number of people -->
       </div>
 
+      <!-- Result -->
       <div class="result-container">
         <div class="total-resume-container">
           <div class="total-resume">
@@ -183,7 +184,7 @@
             </div>
             <span
               class="price"
-              data-selector="tip-amount"
+              data-selector="tip-per-person"
             >
               $0.00
             </span>
@@ -196,7 +197,7 @@
             </div>
             <span
               class="price"
-              data-selector="total"
+              data-selector="total-per-person"
             >
               $0.00
             </span>
@@ -210,6 +211,7 @@
           Reset
         </button>
       </div>
+      <!-- /Result -->
     </div>
 
     <div class="attribution">
@@ -228,6 +230,12 @@
         BrunoAST.
       </a>
     </div>
+
+    <script src="./scripts/bill-calculator.js"></script>
+    <script src="./scripts/input-validation.js"></script>
+    <script src="./scripts/input.js"></script>
+    <script src="./scripts/button.js"></script>
+    <script src="./scripts/result.js"></script>
   </body>
 
 </html>
