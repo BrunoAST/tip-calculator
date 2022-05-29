@@ -22,20 +22,22 @@ button {
 }
 
 .btn-percentage-active {
-  background-color:var(--btn-active);
+  background-color: var(--btn-active);
   color: var(--green-primary);
 }
 
 .btn-reset {
   height: 32px;
   text-transform: uppercase;
+  background-color: var(--btn-active);
+  color: var(--green-primary);
 }
 
 .btn-reset:disabled {
   background-color: var(--btn-disabled);
 }
 
-@media(max-width: 970px) {
+@media (max-width: 970px) {
   .btn-percentage {
     flex-grow: 1;
   }

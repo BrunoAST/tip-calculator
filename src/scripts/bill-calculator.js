@@ -48,6 +48,10 @@ const BillCalculator = {
     return (this._calculatePercentageTip() / this.numberOfPeople).toFixed(2);
   },
 
+  hasValues() {
+    return this.bill || this.numberOfPeople || this.tipPercentage;
+  },
+
   _calculatePercentageTip() {
     return this.bill * (this.tipPercentage / 100);
   },
