@@ -44,7 +44,7 @@ body {
   font-size: 1.5rem;
   color: var(--main-title);
   text-align: center;
-  letter-spacing: 10px;
+  letter-spacing: 15px;
   text-transform: uppercase;
   word-break: break-all;
 }
